@@ -144,9 +144,27 @@
 
     <p>Fanmail? Toss it in a glowstick and yeet it into the void. They’ll find it.</p>
 
-    <div class="signature">
-      This page was last licked by Strobe at 3:47AM.
-    </div>
+  <div class="signature" id="licked-time">
+  This page was last licked by Strobe...
+</div>
+
+<script>
+  function strobeTime() {
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - Math.floor(Math.random() * 3 + 1)); // 1 to 3 minutes ago
+
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12;
+
+    const timeStr = `${hours}:${minutes}${ampm}`;
+    document.getElementById("licked-time").textContent = "This page was last licked by Strobe at " + timeStr + ".";
+  }
+
+  strobeTime();
+</script>
+
   </div>
 
   <script>
