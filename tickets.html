@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticket Denied</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      padding: 3em;
+    }
+
+    h1 {
+      color: red;
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      text-shadow: 0 0 10px red, 0 0 20px red;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-top: 1em;
+      color: #ccc;
+    }
+
+    .glow {
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { text-shadow: 0 0 5px red; }
+      50% { text-shadow: 0 0 20px red; }
+      100% { text-shadow: 0 0 5px red; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="glow">NO TICKETS FOR YOU</h1>
+  <p>Strobe is <strong>too popular</strong>.<br>Tickets will never be available.</p>
+  <p>Try bribing them with glowsticks. It won’t work.</p>
+</body>
+</html>
