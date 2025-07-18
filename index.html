@@ -166,6 +166,35 @@
 </script>
 
   </div>
+  
+<div class="section">
+  <h2 class="glow">Strobe's Current Status</h2>
+  <p id="status-text"></p>
+</div>
+
+<script>
+  const statuses = [
+    "Chewing on mic cables again.",
+    "Somehow inside the fog machine.",
+    "Glowing under protest.",
+    "Asleep in the merch bin.",
+    "Bit the sound guy. Again.",
+    "Tried to eat the setlist.",
+    "Demanding a solo. Screamed it.",
+    "Drinking glitter.",
+    "Wired to the bass amp. Literally.",
+    "Currently upside down.",
+    "Replacing water with glowstick juice.",
+    "Toby told them to stop. They did not.",
+    "Hasn't blinked in 42 minutes.",
+    "Duct-taped to the ceiling (on purpose).",
+    "Talking to the fog again.",
+    "Refusing to leave the stage since last night."
+  ];
+  
+  const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+  document.getElementById("status-text").textContent = randomStatus;
+</script>
 
   <script>
     let count = 0;
