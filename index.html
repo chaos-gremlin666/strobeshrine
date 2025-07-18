@@ -125,7 +125,7 @@
       </ul>
     </div>
     
-<button onclick="window.location.href='tickets.html'">🎫 Get Free Tickets to the Next Show</button>
+      <button onclick="window.location.href='tickets.html'">🎫 Get Free Tickets to the Next Show</button>
 
     <div style="text-align: center; margin-top: 2em;">
       <a href="memory.html">
@@ -219,5 +219,21 @@
       localStorage.setItem("memoryVisited", "true");
     }
   </script>
+  <script>
+  function getTickets() {
+    const chance = Math.random();
+    const btn = document.getElementById('ticketBtn');
+
+    if (chance < 0.1) {
+      btn.innerText = "🎫 1 Ticket Found... Nevermind, Strobe ate it.";
+      setTimeout(() => {
+        window.location.href = 'tickets.html';
+      }, 1800);
+    } else {
+      window.location.href = 'tickets.html';
+    }
+  }
+</script>
+
 </body>
 </html>
