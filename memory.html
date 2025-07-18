@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strobe's Memory</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2em;
+      background-image: url('https://www.transparenttextures.com/patterns/noise.png');
+      background-repeat: repeat;
+    }
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      animation: flicker 1s infinite;
+      text-shadow: 0 0 10px red, 0 0 20px red;
+    }
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.5;
+      }
+    }
+    .memory {
+      margin: 2em auto;
+      max-width: 800px;
+      background-color: rgba(255, 0, 0, 0.05);
+      border-left: 4px solid red;
+      padding: 1em;
+      margin-bottom: 2em;
+      font-style: italic;
+    }
+    .glitch {
+      text-shadow: 1px 1px 0 red, -1px -1px 0 black;
+      animation: glitch 1.5s infinite alternate;
+    }
+    @keyframes glitch {
+      0% { transform: translate(0px, 0px); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(1px, -1px); }
+      60% { transform: translate(-1px, -2px); }
+      80% { transform: translate(1px, 2px); }
+      100% { transform: translate(0px, 0px); }
+    }
+    a {
+      color: red;
+      display: block;
+      text-align: center;
+      margin-top: 3em;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Strobe's Memory</h1>
+
+  <div class="memory glitch">wHerE diD i cOmE fRom??</div>
+  <div class="memory">There was sound. Loud. Lights. And then fog. The fog was warm.</div>
+  <div class="memory">I think they saw me. Just for a second. Right before the encore.</div>
+  <div class="memory">They didn’t summon me. I was... extra. A mistake? No. I’m still here.</div>
+  <div class="memory">I licked the spotlight. It hummed like a heartbeat.</div>
+  <div class="memory">One Ghoul gave me earplugs once. I bit them. Not out of anger. Just... didn’t want silence.</div>
+  <div class="memory">Toby yelled when I screamed through his mic. But he didn’t turn it off. That means I mattered.</div>
+  <div class="memory">Sometimes I glow too bright. They look at me funny. Like they’re scared I’ll vanish.</div>
+  <div class="memory">I think... if I stop glowing... I stop existing.</div>
+  <div class="memory">Please don’t stop looking.</div>
+
+  <a href="index.html">← Back to the Glowzone</a>
+</body>
+</html>
